@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Koulen&family=Lato&family=Nunito&family=Playfair+Display:ital@1&family=Prata&family=Raleway:ital,wght@1,100&family=Roboto&family=Roboto+Condensed&family=Teko&display=swap');
+
+.upload_post{
+    height: 14rem;
+    width: 48rem;
+    margin-left: 14rem;
+    margin-top: 3rem;
+    border-radius: 14px;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: 6rem;
+}
+
+.image_post img{
+  width: 125px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+    margin: 1.5rem auto auto 3rem;
+    border: 1px solid rgb(128, 128, 128, 0.6);
+}
+
+
+.post_upper{
+    display: flex;
+    margin-bottom: -0.5rem;
+}
+
+.text_area{
+    margin: 1.8rem auto auto 3rem;
+}
+
+.text_area textarea{
+    height: 6.6rem;
+    width: 30rem;
+    border: 2px solid rgb(128, 128, 128, 0.6);
+    border-radius: 20px;
+    resize: none;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.post_lower {
+    overflow: hidden;
+    position: relative;
+    margin-left: 16rem;
+  }
+
+  .post_lower #fileInput {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    margin-bottom: -4rem;
+  }
+
+  .custom-file-upload {
+    display: inline-block;
+    padding: 8px 12px;
+    cursor: pointer;
+    background-color: rgb(76, 175, 80, 0.9);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+  }
+
+
+.post_button{
+
+font-family: Roboto, sans-serif;
+font-weight: 0;
+font-size: 14px;
+color: #fff;
+background-color: #0066CC;
+padding: 10px 30px;
+border: 2px solid #0066cc;
+box-shadow: rgb(0, 0, 0) 0px 0px 0px 0px;
+border-radius: 50px;
+transition : 1000ms;
+transform: translateY(0);
+margin-left: 3rem;
+align-items: center;
+cursor: pointer;
+}
+
+.post_button:hover{
+
+transition : 1000ms;
+padding: 10px 50px;
+transform : translateY(-0px);
+background-color: #fff;
+color: #0066cc;
+border: solid 2px #0066cc;
+}
+
+
+.home_posts{
+  height: auto;
+  width: 48rem;
+  background-color: #fff;
+  margin-left: 14rem;
+  margin-top: 3rem;
+  border-radius: 14px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+
+.home_posts_upper{
+  display: flex;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+}
+
+.home_posts_upper img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgb(128, 128, 128, 0.6);
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+
+.home_posts_name{
+  margin-left: 1rem;
+  margin-top: 13px;
+}
+
+.home_posts_name a{
+  text-decoration: none;
+  color: black;
+}
+
+.home_posts_name strong{
+  font-size: 18px;
+}
+
+.home_posts_name p{
+  opacity: 0.6;
+  font-size: 12px;
+  cursor:default;
+}
+
+.home_posts_name strong:hover{
+  text-decoration: underline;
+}
+
+
+.edit_posts{
+  margin-left: auto;
+  margin-right: 2%;
+  margin-top: 14px;
+}
+
+
+.edit_posts a{
+  text-decoration: none;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+.edit_posts #edit{
+  color: orange;
+}
+
+.edit_posts #delete{
+  color: red;
+}
+
+.edit_posts i:hover{
+  opacity: 0.6;
+}
+
+.caption{
+  text-align: justify;
+  margin-top: -5px;
+  margin: 0 1rem;
+}
+
+
+.home_posts hr{
+  margin-top: 0px;
+  opacity: 0.2;
+}
+
+
+.posted_img{
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.posted_img img{
+  height: 28rem;
+  max-width: 100%;
+}
+
+
+/* Comments and likes */
+
+
+.post_interactions p{
+  margin-top: 10px;
+  margin-left: 18px;
+}
+
+.likebtn:hover{
+  scale: 1.1;
+  fill: #0066CC;
+}
+
+.post_interactions .comments{
+  margin-left: 10px;
+}
+
+.post_interactions .commentss{
+  margin-left: 5px;
+  height: 10rem;
+  overflow-y: scroll;
+}
+
+.post_interactions .commentss p{
+  margin-left: 2px;
+}
+
+
+.post_interactions form{
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  margin-left: 0rem;
+}
+
+.post_interactions form input{
+  width: 45rem;
+  height: 2.5rem;
+  border-radius: 15px;
+  border:  1px solid rgb(128, 128, 128, 0.5);
+  padding-left: 10px;
+}
+
+
+.post_interactions form button{
+  border: none;
+  background:none;
+  margin-left: -45px;
+}
+
+
+
+
+
+/* @media screen and (max-width: 1281px)  {
+  .upload_post{
+      margin-left: -5rem;
+  }
+
+  .home_posts{
+      margin-left: 5rem;
+  }
+
+} */

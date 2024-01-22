@@ -1,0 +1,100 @@
+@media screen and (max-width: 1281px)  {
+    .upload_post{
+        margin-left: 5rem;
+    }
+
+    .home_posts{
+        margin-left: 5rem;
+    }
+
+}
+
+@media screen and (max-width: 1034px)  {
+
+    .upload_post{
+        margin-left: 2rem;
+        width: 40rem;
+    }
+
+    .text_area textarea{
+        width: 25rem;
+        margin-left: -1.5rem;
+    }
+
+    .post_lower{
+        margin-left: 13rem;
+    }
+
+    .home_posts{
+        margin-left: 2rem;
+        width: 40rem;
+    }
+
+    .post_interactions form{
+        margin-left: -1rem;
+    }
+
+    .post_interactions .commentss{
+        margin-left: -5px;
+    }
+
+}
+
+
+@media screen and (max-width: 460px) {
+
+    .upload_post{
+        margin-left: 1rem;
+        width: 26rem;
+    }
+
+    .image_post img{
+       content-visibility: hidden;
+       border: none;
+    }
+
+    .text_area textarea{
+        width: 25rem;
+        margin-left: -13.5rem;
+    }
+
+    .post_lower{
+        margin-left: 6rem;
+    }
+
+    .home_posts{
+        margin-left: 1rem;
+        width: 26rem;
+    }
+
+    .post_interactions form{
+        margin-left: -1rem;
+    }
+
+    .post_interactions .commentss{
+        margin-left: -5px;
+    }
+
+    .posted_img img{
+        height: auto;
+        width: 100%;
+      }
+
+      .post_interactions p{
+        margin-top: 10px;
+        margin-left: 10px;
+      }
+
+      .post_interactions .comments{
+        margin-left: 10px;
+      }
+
+      .post_interactions form input{
+        width: 25rem;
+        height: 2.5rem;
+        border-radius: 15px;
+        border:  1px solid rgb(128, 128, 128, 0.5);
+        padding-left: 10px;
+        margin-left: 10px;
+      }
+}

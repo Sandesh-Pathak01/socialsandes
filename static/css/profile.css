@@ -1,0 +1,93 @@
+.profile_div{
+    display: flex;
+    /* background-color: wheat; */
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+.profile_pic{
+    /* width: 600px; */
+    margin-left: 10rem;
+}
+
+.profile_pic img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 25px;
+    margin-left: 45px;
+}
+
+
+.profile_details{
+    /* border: 1px solid black; */
+    height: 300px;
+    width: 100%;
+    margin-left: 5rem;
+    margin-top: 12px;
+}
+
+.upper{
+    margin-top: 2rem;
+    display: flex;
+}
+
+.upper p{
+    font-size: 21px;
+    font-weight: bolder;
+    margin-right: 10rem;
+}
+
+.upper button{
+    height: 2.2rem;
+    width: 6.5rem;
+    background-color: rgb(128, 128, 128, 0.07);
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    margin-left: 5rem;
+    margin-top: -5px;
+}
+
+.upper button:hover{
+    background-color: rgb(128, 128, 128, 0.4);
+    
+}
+
+#set{
+    width: 2rem;
+    margin-left: 10px;
+}
+
+.middle{
+    display: flex;
+    margin-top: 8px;
+    gap: 20px;
+}
+
+.middle span{
+    font-weight: bold;
+}
+
+
+.lower{
+    font-size: 17px;
+    font-weight: 20000;
+}
+
+#gender{
+    margin-top: -17px;
+}
+
+#relationship{
+    margin-top: -17px;
+}
+
+#profilehr{
+    margin-top: -70px;
+    width: 65rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+

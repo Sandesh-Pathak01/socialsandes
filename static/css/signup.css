@@ -1,0 +1,98 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  
+  .signup-container {
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    width: 550px;
+  }
+  
+  .signup-form {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    color: #1877f2;
+    margin-left: 4rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .name-group {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 2rem;
+  }
+  
+  label {
+    margin-bottom: 6px;
+  }
+  
+  input {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .birthday-group,
+  .gender-group {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  select,
+  input[type="radio"] {
+    margin-right: 0px;
+  }
+  
+  .terms {
+    font-size: 12px;
+    color: #555;
+    margin-top: 10px;
+  }
+  
+  a {
+    color: #1877f2;
+  }
+  
+  button {
+    background-color: #42b72a;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+  }
+  
+  button:hover {
+    background-color: #398022;
+  }
+  
+  .gender-group label{
+    margin-right: 15px;
+  }
+
+
+.message{
+  padding-left: 25%;
+  padding-right: 25%;
+  color: orange;
+}

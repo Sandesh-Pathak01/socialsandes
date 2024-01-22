@@ -1,0 +1,32 @@
+@media screen and (max-width: 1281px)  {
+    .profile_div{
+        margin-left: -10rem;
+    }
+
+}
+
+
+@media screen and (max-width: 1015px)  {
+    .profile_div .upper button{
+        margin-left: -55px;
+    }
+
+}
+
+@media screen and (max-width: 460px)  {
+    .profile_div{
+        margin-left: -12rem;
+    }
+    .profile_div img{
+        height: 95px;
+        width: 100px;
+        margin-right: -50px;
+        margin-top: 45px;
+    }
+    .profile_div .upper button{
+        margin-left: -145px;
+        margin-top: 1px;
+    }
+   
+
+}

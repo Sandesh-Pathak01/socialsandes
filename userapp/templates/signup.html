@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/signup.css' %}">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <title>Facebook Sign Up</title>
+</head>
+<body>
+
+<div class="signup-container">
+  <div class="signup-form">
+    <h2>Create a New Account</h2>
+
+    <form method="POST" action="">
+      {% csrf_token %}
+
+      <label for="username">Username:</label>
+      <input type="text" id="email" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="password">Confirm Password:</label>
+      <input type="password" id="password" name="password2" required>
+
+      <p class="terms">By clicking Sign Up, you agree to our <a href="#">Terms</a>, <a href="#">Data Policy</a> and <a href="#">Cookie Policy</a>. You may receive SMS notifications from us and can opt out at any time.</p>
+
+      <button type="submit">Sign Up</button>
+    </form>
+    <hr>
+    <p>Already Have an account? <a href="{% url 'login_page' %}">Login.</a></p>
+
+    {% for message in messages %}
+    <div class="alert alert-warning" role="alert">
+      {{message}}
+    </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+
+</body>
+</html>

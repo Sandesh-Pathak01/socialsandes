@@ -1,0 +1,95 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+
+    <link rel="stylesheet" href="{% static 'css/settings.css' %}">
+</head>
+
+<body>
+
+
+    <nav>
+
+        <a href="{% url 'home' %}"><h2>Home</h2></a>
+        <h2>Settings</h2>
+        
+
+    </nav>
+
+    <form action="{% url 'profile_update' %}" method="post" style="width: 25rem;" enctype="multipart/form-data"> 
+        {% csrf_token %}
+        <div class="form-container">
+            
+            <div id="profile-picture-container">
+                <img id="profile-picture" src="{{data.profile_pic.url}}" alt="Profile Picture">
+                <label for="change-pfp" id="custom-input">Change PFP</label>
+                <input type="file" id="change-pfp" name="profile_picture" onchange="displayProfilePicture()">
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input style="background-color: rgb(128, 128, 128, 0.2);" type="text" id="username" value="{{data.user}}" name="username" required readonly>
+                <span class="username-tooltip" id="username-tooltip">Can change username once every 14 days</span>
+            </div>
+
+            <div class="form-group">
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" value="{{data.name}}" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" id="email" value="{{data.email}}" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" value="" name="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender">
+                    <option value="male" selected>{{data.gender}}</option>
+                    <option value="female">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Save</button>
+            </div>
+        </div>
+        {% if messages %}
+        {% for message in messages %}
+        <div class="messages">
+            <p>{{message}}</p>
+            <a href="{% url 'home' %}">Go To Home Page</a>
+        </div>
+        {% endfor %}
+        {% endif %}
+    </form>
+
+    <script>
+        function displayProfilePicture() {
+            var input = document.getElementById('change-pfp');
+            var image = document.getElementById('profile-picture');
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                image.src = e.target.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+
+    </script>
+</body>
+
+</html>

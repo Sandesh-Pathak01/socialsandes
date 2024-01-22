@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+  <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+  <link rel="stylesheet" href="{% static 'css/homeres.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+  <!-- JavaScript to maintain scroll position after reload -->
+  
+
+  <div class="upload_post">
+    <form action="{% url 'upload_posts' %}" method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div class="post_upper">
+        <div class="image_post">
+          <img src="{{ user_pfp.profile_pic.url }}" alt="" />
+        </div>
+        <input type="hidden" value="{{user_pfp.user}}"> <!-- username -->
+        <div class="text_area">
+          <textarea name="caption" id="" cols="30" rows="10" placeholder="Share Your Thoughts....."></textarea>
+        </div>
+      </div>
+      <div class="post_lower">
+        <input type="file" name="post_image" class="custom-file-input" id="fileInput" onchange="updateFileName()" />
+        <label for="fileInput" class="custom-file-upload"><i class="fa-regular fa-image"></i> Upload</label>
+        <button type="submit" class="post_button">Post</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Posts Section -->
+  {% for d in data %}
+    <div class="home_posts">
+      <div class="home_posts_upper">
+        <a href=""><img src="{{ d.profile_pic.profile_pic.url }}" class="zoomed-profile-pic" alt="" /></a>
+        <div class="home_posts_name">
+          <a href="{% url 'other_users' d.user %}"><strong>{{d.name.name}}</strong></a>
+          <p>&nbsp; -{{d.published_date}}</p>
+        </div>
+        <div class="edit_posts">
+          {% if d.name.user == request.user %}
+            <a href="{% url 'delete_post' d.post_id %}" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Delete"><i id="delete" class="fa-solid fa-trash"></i></a>
+          {% endif %}
+        </div>
+      </div>
+
+      <hr />
+      <div class="caption">
+        <p>{{d.caption}}</p>
+      </div>
+
+      {% if d.post_image %}
+        <div class="posted_img">
+          <img src="{{d.post_image.url}}" alt="" />
+        </div>
+      {% endif %}
+
+      <!-- Post Interactions -->
+      <div class="post_interactions">
+        <form action="{% url 'hlikes' %}" method="post" class="like-form">
+          {% csrf_token %}
+          <p>
+            <input type="hidden" name="post_id" value="{{d.post_id}}">
+            <button type="submit" style="margin-left: 1px;"><i class="fa-regular fa-thumbs-up fa-xl likebtn"></i>&nbsp; </button>{{d.likes.count}} Likes.
+          </p>
+        </form>
+
+        <div class="comments">
+          <div class="commentss">
+            <h3>Comments:</h3>
+            {% for c in d.post_comment.all %}
+            <p><a href="{% url 'other_users' c.name %}" style="text-decoration: none; font-weight: bold;">{{c.post_comment.name.name}}</a>: {{c.comment}}</p>
+            {% endfor %}
+          </div>
+
+          <!-- Add Comments Form -->
+          <form action="{% url 'hcomments' %}" method="post">
+            {% csrf_token %}
+            <input type="hidden" name="post_id" value="{{d.post_id}}">
+            <input type="text" placeholder="Write a comment..." maxlength="100" name="comment" />
+            <button type="submit"><i class="fa-regular fa-paper-plane fa-xl"></i></button>
+          </form>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+  <script src="{% static 'js/home.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,158 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    background-color:aliceblue;
+    height: 5rem;
+    position: sticky;
+    width: 100%;
+    overflow: hidden;
+    transition: top 0.3s;
+    top: 0;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 30px 0 rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    display: flex;
+    margin-left: 1rem;
+    margin-top: 8px;
+}
+
+.logo form{
+    margin-top: 14px;
+    margin-left: 15px;
+}
+
+.logo form input{
+    width: 20rem;
+    height: 2.2rem;
+    border-radius: 15px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    border: 1px solid grey;
+}
+
+.logo form button{
+    width: 2rem;
+    height: 2rem;
+    margin-left: -40px;
+    border: none;
+    background: none;
+}
+
+.logo form button i{
+    height: 3rem;
+}
+
+.logo img{
+    width: 70px;
+    height: 60px;
+    transition: 0.6s;
+}
+
+.logo img:hover{
+    transform: scale(1.05);
+}
+
+.nav_items ul{
+    display: flex;
+    list-style: none;
+    margin-left: 42rem;
+    font-size: 21px;
+}
+
+.nav_items li{
+    font-size: 1.8rem;
+    height: 5rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: azure; */
+    transition: 0.6s;
+}
+
+.nav_items a{
+    text-decoration: none;
+}
+
+.nav_items li:hover{
+    scale: 1.08;
+}
+
+#after_nav{
+    margin-top: 0;
+    
+}
+
+
+.nav_items i:hover{
+    color: #8e44ad;
+}
+
+.nav_items i{
+    transition: 1s;
+}
+
+#after_nav{
+    color: black;
+    height: 5px;
+}
+
+
+
+
+/* Left Side */
+
+main{
+    height: 89.2vh;
+    display: flex;
+}
+
+.left_side{
+    background-color: rgb(255, 228, 196, 0.2);
+    width: 22rem;
+    overflow: hidden;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.1), 0 1px 5px 0 rgba(0, 0, 0, 0.1);
+}
+
+.right_side{
+    width: 100%;
+    overflow-y: scroll;
+    background-color: rgb(128, 128, 128, 0.1)
+}
+
+.left_side ul{
+    margin-top: 2rem;
+    list-style: none;
+    width: 110%;
+    margin-left: -31px;
+}
+
+.left_side li{
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px 0px;
+}
+
+.left_side li:hover{
+    background-color: rgb(128, 128, 128, 0.2);
+}
+
+.left_side a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+    padding-right: 60px;
+}
+
+.left_side i{
+    margin-right: 15px;
+    margin-left: 30px;
+    font-size: 22px;
+}
+

@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load static %} {% block css %}
+<link rel="stylesheet" href="{% static 'css/search.css' %}" />
+{% endblock %} {% block content %}
+
+<div class="heading">
+  <h1>Search Results...</h1>
+  <hr />
+</div>
+
+<div class="search_result">
+{% if search %}
+    {% for s in search %}
+    <a href="{% url 'other_users' s.user %}">
+    <div class="peoples">
+        <div class="left_s">
+            <img src="{{s.profile_pic.url}}" alt="" />
+            <div class="texts_s">
+                <a style="text-decoration: none; color: black;" href="{% url 'other_users' s.user %}"><p class="name"><strong>{{s.name}}(@{{s.user}})</strong></p></a>
+                <p>
+                {{s.bio}}
+                </p>
+            </div>
+          </a>
+        </div>
+    </div>
+  {% endfor %}
+{% else %}
+  <h2>User Not Found:/</h2>
+{% endif %}
+</div>
+
+{% endblock %}
